@@ -1,0 +1,156 @@
+:root {
+	--primary: #EB1616;
+	--secondary: #191C24;
+	--light: #6C7293;
+	--dark: #000000;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	pad: 10px;
+}
+
+body {
+	background-color: var(--dark);
+	font-family: 'DM Sans', sans-serif;
+	color: #fff;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #333;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+nav a {
+	flex-wrap: wrap;
+	margin: 10px;
+	color: #fff;
+	text-decoration: none;
+	font-size: x-large;
+	opacity: 0;
+	transform: translateX(100%);
+	animation: nav-link-entrance 1s ease-in forwards;
+	animation-delay: calc(0.1s * var(--delay));
+}
+
+@keyframes nav-link-entrance {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+nav a:nth-child(2) {
+	--delay: 1;
+}
+
+nav a:nth-child(3) {
+	--delay: 2;
+}
+
+h1 {
+	font-size: xxx-large;
+	margin: 0 0 20px;
+	text-align: center;
+	color: lightgrey;
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 2rem;
+	}
+}
+
+.hero {
+	background-image: linear-gradient(to bottom right, #4f4f4f, #2d2d2d);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero-content {
+	max-width: 600px;
+	text-align: center;
+}
+
+.hero h2 {
+	font-size: 3.5rem;
+	margin-bottom: 20px;
+	opacity: 0;
+	animation: fade-in 1s ease-in forwards;
+	animation-delay: 0.5s;
+}
+
+@keyframes fade-in {
+	to {
+		opacity: 1;
+	}
+}
+
+.hero p {
+	font-size: 1.5rem;
+	margin-bottom: 30px;
+	opacity: 0;
+	animation: fade-in 1s ease-in forwards;
+	animation-delay: .8s;
+}
+
+.hero a {
+	font-size: 1.5rem;
+	padding: 10px 20px;
+}
+
+footer{
+	text-align: center;
+}
+
+#insta-link {
+	display: grid;
+	background-color: #8a3ab9; 
+	height: 10vh;
+	opacity: 0;
+	border-radius: 10px;
+	animation: fade-in 1s ease-in forwards;
+	animation-delay: 1s;
+	overflow: auto;
+
+	width: max-content;
+    margin: auto;
+}
+
+#insta-link a {
+	text-decoration: dashed;
+	color: whitesmoke;
+	align-self: center;
+	justify-self: center;
+	font-size: xx-large;
+}
+
+#insta-link:hover {
+	background-color: #8a3ab9;
+}
+
+#insta-link:hover a{
+	background-color: #bc2a8d;
+	border-radius: 10px;
+	width: calc(100% - 20px);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
