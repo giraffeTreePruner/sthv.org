@@ -7,12 +7,12 @@
 This is a working project and changes should be documented in comments and documented here.
 
 ### Structure
-`/` root
-    `/index.html` entrypoint being served
-`/style/`
-    `../style.css` main style for the site currently
-`/html/` current page for other pages. Going to migrate to template model for Django...
-    `../about.html`
+`/` root\
+&emsp;`/index.html` entrypoint being served\
+`/style/`\
+&emsp;`../style.css` main style for the site currently\
+`/html/` current page for other pages. Going to migrate to template model for Django...\
+&emsp;`../about.html`\
 
 
 #### Current Plans
